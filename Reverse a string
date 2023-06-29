@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+string reversestring(string str){
+    int i = 0, j = str.length()-1;
+    while(i<j){
+        swap(str[i],str[j]);
+        i++;
+        j--;
+    }
+    return str;
+}
+
+int main() {
+    // Write C++ code here
+    string s;
+    cin>>s;
+    
+    cout << reversestring(s);
+
+    return 0;
+}
