@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+ int checkAnagram(string str1, string str2){
+     if(str1.length()!=str2.length()){
+         return 0;
+     }
+     sort(str1.begin(),str1.end());
+     sort(str2.begin(),str2.end());
+     int i = 0;
+    while(i<str1.length()){
+        if(str1[i]==str2[i]){
+            i++;
+        }
+        else{
+            return 0;
+        }
+    }
+    return 1;
+    
+}
+
+int main() {
+    // Write C++ code here
+    string s1;
+    string s2;
+    cin>>s1;
+    cin>>s2;
+    cout << checkAnagram(s1,s2);
+    return 0;
+}
