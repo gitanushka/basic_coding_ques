@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+ void nonMatching(string str){
+     
+     unordered_map<char,int> mp;
+     string ans = " ";
+     for(int i=0;i<str.length();i++){
+         mp[str[i]]++;
+     }
+     
+     for(auto it: mp){
+         if(it.second==1){
+             char  ch = it.first;
+             ans=ans+ch;
+         }
+     }
+     reverse(ans.begin(),ans.end());
+     for(int i=0; i<ans.size();i++){
+         cout<<ans[i]<<" ";
+     }
+     
+}
+
+
+int main() {
+    // Write C++ code here
+    string s;
+    cin>>s;
+    nonMatching(s);
+    return 0;
+}
