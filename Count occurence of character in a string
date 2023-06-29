@@ -1,0 +1,56 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int countOccurence(string str, char character){
+    int count = 0;
+   for(int i=0;i<str.length();i++){
+       if(str[i]==character){
+           count++;
+       }
+   }
+    return count;
+}
+
+int main() {
+    // Write C++ code here
+    string s;
+    cin>>s;
+    char ch;
+    cout<<"Enter the character to find its occurence in a string"<<endl;
+    cin>>ch;
+    cout << countOccurence(s, ch);
+    return 0;
+}
+
+                                     OR
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int countOccurence(string str, char character){
+    unordered_map<char, int> mp;
+    int occ = 0;
+    for(int i=0;i<str.length();i++){
+        mp[str[i]]++;
+        }
+    
+    for(auto it:mp){
+        if(it.first==character){
+            occ = it.second;
+        }
+    }
+    return occ;
+    
+}
+
+int main() {
+    // Write C++ code here
+    string s;
+    cin>>s;
+    char ch;
+    cout<<"Enter the character to find its occurence in a string"<<endl;
+    cin>>ch;
+    cout << countOccurence(s, ch);
+    return 0;
+}
