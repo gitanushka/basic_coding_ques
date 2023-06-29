@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+ int calcVowCons(string str){
+     int vow = 0, cons = 0;
+     for(int i=0;i<str.length();i++){
+         if(str[i]=='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u' ){
+             vow++;
+         }
+         else{
+             cons++;
+         }
+     }
+     cout << vow << " " << cons;
+     
+}
+
+int main() {
+    // Write C++ code here
+    string s;
+    cin>>s;
+    calcVowCons(s);
+    return 0;
+}
