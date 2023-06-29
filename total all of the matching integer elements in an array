@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+ void totalMatchingElements(int arr[], int n){
+     
+     unordered_map<int,int> mp;
+     int total = 0;
+     for(int i=0;i<n;i++){
+         mp[arr[i]]++;
+     }
+     
+     for(auto it: mp){
+         if(it.second>1){
+             int num = it.first;
+             total+=num;
+         }
+     }
+     cout<< total;
+     
+}
+
+
+int main() {
+    // Write C++ code here
+    int n;
+    cin>>n;
+    int arr[n];
+    
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    totalMatchingElements(arr, n);
+    return 0;
+}
