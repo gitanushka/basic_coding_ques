@@ -1,0 +1,30 @@
+// Online C++ compiler to run C++ program online
+#include <bits/stdc++.h>
+using namespace std;
+
+ void removeDuplicates(string str){
+   unordered_map<char,int> mp;
+   char ch;
+   vector<char> ans;
+   for(int i=0;i<str.length();i++){
+       mp[str[i]]++;
+   }
+   for(auto it: mp){
+       if(it.second==1){
+           ch = it.first;
+           ans.push_back(ch);
+       }
+   }
+   reverse(ans.begin(),ans.end());
+   for(int i=0;i<ans.size();i++){
+       cout<<ans[i];
+   }
+}
+
+int main() {
+    // Write C++ code here
+    string s;
+    cin >> s;
+    removeDuplicates(s);
+    return 0;
+}
