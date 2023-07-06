@@ -1,0 +1,22 @@
+ int getMiddle(Node *head)
+    {
+        // Your code here
+        int element;
+        Node *temp = head,*p;
+        p = head;
+        int count = 0;
+        while(temp!=NULL){
+        temp=temp->next;
+        count++;
+        }
+        int mid = count/2;
+        if(count==1){
+            return p->data;
+        }
+       for(int i=0;i<mid;i++){
+        p=p->next;
+        element = p ->data;
+      }
+      
+      return element;
+    }
