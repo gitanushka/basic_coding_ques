@@ -1,0 +1,55 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+string removeReplace(string str, char c){
+    
+   string ans = "";
+   
+   for(int i=0;i<str.length();i++){
+       if(str[i]!=c){
+           ans.push_back(str[i]);
+       }
+   }
+   return ans;
+   
+}
+int main() {
+    // Write C++ code here
+    string s;
+    char ch;
+    cout<<"Enter string"<<endl;
+    cin >> s;
+    cout<<"Enter character you wanna remove"<<endl;
+    cin>>ch;
+    cout << removeReplace(s,ch);
+    return 0;
+} 
+
+                       ********REPLACE******
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+string removeReplace(string str, char c, char newc){
+   
+   for(int i=0;i<str.length();i++){
+       if(str[i]==c){
+          str[i]=newc;
+       }
+   }
+   return str;
+}
+int main() {
+    // Write C++ code here
+    string s;
+    char ch, newch;
+    cout<<"Enter string"<<endl;
+    cin >> s;
+    cout<<"Enter character to be replaced"<<endl;
+    cin>>ch;
+    cout<<"Enter character new character"<<endl;
+    cin>>newch;
+    cout << removeReplace(s,ch, newch);
+    return 0;
+}
