@@ -1,0 +1,23 @@
+// Online C++ compiler to run C++ program online
+#include <bits/stdc++.h>
+using namespace std;
+
+int BtoD(long long int binary){
+    int decimal = 0, i = 0, digit;
+    while(binary!=0){
+        digit = binary%10;
+        decimal += digit * pow(2,i);
+        binary /=10;
+        i++;
+    }
+    return decimal;
+}
+
+int main() {
+    // Write C++ code here
+    long long int binary;
+    cout<<"Enter 8 bit binary number"<<endl;
+    cin>>binary;
+    cout<<BtoD(binary);
+    return 0;
+}
