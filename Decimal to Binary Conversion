@@ -1,0 +1,25 @@
+// Online C++ compiler to run C++ program online
+#include <bits/stdc++.h>
+using namespace std;
+
+
+void DtoB(int decimal){
+    int  binary[8], i = 0;
+    while(decimal!=0){
+        binary[i]=decimal%2;
+        decimal /=2;
+        i++;
+    }
+    for(int j=i-1;j>=0;j--){
+        cout<<binary[j];
+    }
+}
+
+int main() {
+    // Write C++ code here
+     int decimal;
+    cout<<"Enter decimal number"<<endl;
+    cin>>decimal;
+    DtoB(decimal);
+    return 0;
+}
